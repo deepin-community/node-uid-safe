@@ -1,3 +1,31 @@
+node-uid-safe (2.1.5+~2.1.2-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.4.1, no changes needed.
+  * Bump debhelper from old 12 to 13.
+    + Drop check for DEB_BUILD_OPTIONS containing "nocheck", since debhelper now
+      does this.
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ Yadd ]
+  * Update standards version to 4.6.0, no changes needed.
+  * Add "Rules-Requires-Root: no"
+  * Modernize debian/watch
+    * Fix filenamemangle
+    * Fix GitHub tags regex
+  * Drop dependency to nodejs
+  * Mark test dependencies with <!nocheck>
+  * Use dh-sequence-nodejs auto test & install
+  * Embed typescript declarations and repack
+
+ -- Yadd <yadd@debian.org>  Sun, 26 Dec 2021 18:42:48 +0100
+
 node-uid-safe (2.1.5-1) unstable; urgency=medium
 
   * Team upload
