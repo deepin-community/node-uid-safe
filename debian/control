@@ -1,25 +1,26 @@
 Source: node-uid-safe
-Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
-Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
 Section: javascript
 Priority: optional
-Build-Depends: debhelper (>= 12~),
-               dh-buildinfo,
-               nodejs,
-               node-random-bytes,
-               node-promise,
-               mocha
-Standards-Version: 4.3.0
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
+ , node-promise <!nocheck>
+ , node-random-bytes <!nocheck>
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/js-team/node-uid-safe
 Vcs-Git: https://salsa.debian.org/js-team/node-uid-safe.git
 Homepage: https://github.com/crypto-utils/uid-safe
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
 Package: node-uid-safe
 Architecture: all
-Depends: ${misc:Depends},
-         nodejs,
-         node-random-bytes,
-         node-promise
+Depends: ${misc:Depends}
+ , node-promise
+ , node-random-bytes
+Provides: ${nodejs:Provides}
 Description: UID generator for cookie and URL
  This Node.js module provides a generator to create cryptographically secure
  UIDs safe for both cookie and URL usage.

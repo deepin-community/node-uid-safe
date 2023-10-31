@@ -2,17 +2,22 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: uid-safe
 Upstream-Contact: https://github.com/crypto-utils/uid-safe/issues
 Source: https://github.com/crypto-utils/uid-safe
+ https://registry.npmjs.org/@types/uid-safe
 
 Files: *
-Copyright:
+Copyright: 
  2014 Jonathan Ong <me@jongleberry.com>
  2015-2017 Douglas Christopher Wilson <doug@somethingdoug.com>
 License: Expat
 
 Files: debian/*
-Copyright:
+Copyright: 
  2014 Leo Iannacone <l3on@ubuntu.com>
  2016 Paolo Greppi <paolo.greppi@libpf.com>
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat
